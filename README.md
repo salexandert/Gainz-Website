@@ -9,6 +9,7 @@ The Gainz desktop app lives separately at <https://github.com/salexandert/Gainz>
 - Product documentation and walkthrough content lives in the Gainz app repository and GitHub wiki.
 - This website links users to the wiki and selected guide pages.
 - Website screenshots are copied from the app repository after product UI changes.
+- Netlify project `gainzstore` deploys this repository's `main` branch.
 
 ## Update Flow
 
