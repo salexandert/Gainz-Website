@@ -1,0 +1,10 @@
+node_modules/
+.netlify/
+.env
+.env.*
+*.log
+Thumbs.db
+.DS_Store
+dist/
+_site/
+package-lock.json
