@@ -260,6 +260,10 @@ nav a:focus {
   color: var(--muted);
 }
 
+.fit-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .workflow-grid article,
 .support-download article {
   padding: 1.2rem;
@@ -412,6 +416,7 @@ nav a:focus {
 
   .workflow-grid,
   .docs-grid,
+  .fit-grid,
   .screenshot-grid {
     grid-template-columns: 1fr;
   }

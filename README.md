@@ -2,7 +2,7 @@
 
 This repository contains the public marketing site for Gainz at <https://cryptogainz.store/>.
 
-The Gainz desktop app lives separately at <https://github.com/salexandert/Gainz>. Keeping the website in its own repository lets Netlify deploy public site updates without mixing website hosting concerns into the local-first app codebase.
+The Gainz desktop app lives separately at <https://github.com/salexandert/Gainz>. Keeping the website in its own repository lets Netlify deploy public site updates without mixing website hosting concerns into the private offline app codebase.
 
 ## Source Of Truth
 

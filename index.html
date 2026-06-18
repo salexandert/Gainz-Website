@@ -3,18 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gainz | Local-first crypto reconciliation dashboard</title>
-    <meta name="description" content="Gainz is a free local-first desktop app for crypto reconciliation, current holdings review, basis links, tax evidence, and audit packet preparation.">
+    <title>Gainz | Private offline crypto tax reconciliation</title>
+    <meta name="description" content="Gainz is a free private offline desktop app for crypto CSV reconciliation, holdings review, missing basis work, tax evidence inventory, and CPA-ready draft audit packets.">
     <link rel="canonical" href="https://cryptogainz.store/">
-    <meta property="og:title" content="Gainz | Local-first crypto reconciliation dashboard">
-    <meta property="og:description" content="A free desktop app that keeps crypto source records on your computer while helping organize holdings reconciliation, basis review, and audit packet workpapers.">
+    <meta property="og:title" content="Gainz | Private offline crypto tax reconciliation">
+    <meta property="og:description" content="A free desktop app for reconciling crypto records and preparing CPA-ready draft audit packets without uploading transaction history.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://cryptogainz.store/">
     <meta property="og:site_name" content="Gainz">
     <meta property="og:image" content="https://cryptogainz.store/assets/screenshots/gainz-holdings-accounting.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Gainz | Local-first crypto reconciliation dashboard">
-    <meta name="twitter:description" content="Import crypto CSVs, follow a reconciliation dashboard, review holdings and basis gaps, and export audit packet workpapers locally.">
+    <meta name="twitter:title" content="Gainz | Private offline crypto tax reconciliation">
+    <meta name="twitter:description" content="Import CSVs, review missing basis and holdings gaps, scan tax evidence by reference, and generate CPA-ready draft audit packets without uploading transaction history.">
     <link rel="icon" href="/assets/gainz_logo.png">
     <link rel="stylesheet" href="/styles.css">
     <script type="application/ld+json">
@@ -24,10 +24,10 @@
         "name": "Gainz",
         "applicationCategory": "FinanceApplication",
         "operatingSystem": "Windows, macOS",
-        "softwareVersion": "0.2.11",
+        "softwareVersion": "0.2.12",
         "url": "https://cryptogainz.store/",
         "downloadUrl": "https://github.com/salexandert/Gainz/releases/latest/download/Gainz-Windows.zip",
-        "description": "Local-first crypto reconciliation software for dashboard-guided holdings review, basis links, tax evidence, report exports, and audit packet preparation.",
+        "description": "Private offline crypto tax reconciliation software for dashboard-guided holdings review, basis links, tax evidence inventory, report exports, and CPA-ready draft audit packet preparation.",
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -56,21 +56,20 @@
     <main id="main">
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">Free local desktop tool</p>
-          <h1>Local-first crypto reconciliation dashboard</h1>
+          <p class="eyebrow">Free private offline desktop tool</p>
+          <h1>Private offline crypto tax reconciliation</h1>
           <p class="hero-lede">
-            Gainz helps organize crypto records, follow a dashboard-led reconciliation flow,
-            declare current holdings, inspect basis gaps, review tax evidence, model potential
-            sales, and export reports or an audit packet before working with a qualified tax professional.
+            Import CSVs, review missing basis and holdings gaps, scan tax evidence by reference,
+            and generate CPA-ready draft audit packets without uploading your transaction history.
           </p>
           <div class="hero-actions">
             <a class="button button-primary" href="https://github.com/salexandert/Gainz/releases">Download from GitHub</a>
             <a class="button button-secondary" href="https://github.com/salexandert/Gainz/wiki/Using-Gainz-From-Import-To-Audit-Packet">Read the walkthrough</a>
           </div>
           <div class="trust-row" aria-label="Product assurances">
-            <span>Latest release 0.2.11</span>
-            <span>No required cloud upload</span>
-            <span>User-controlled records</span>
+            <span>Latest release 0.2.12</span>
+            <span>No transaction upload required</span>
+            <span>Reference-only tax evidence by default</span>
             <span>Audit packet exports</span>
           </div>
         </div>
@@ -78,6 +77,38 @@
           <img src="/assets/screenshots/gainz-home.png" alt="Gainz Reconciliation Dashboard showing summary, next action, review queue, and workflow cards">
           <figcaption>Dashboard shows the current readiness summary, next action, and review queue.</figcaption>
         </figure>
+      </section>
+
+      <section class="section-shell">
+        <div class="section-kicker">Positioning</div>
+        <h2>Built for messy records, privacy, and CPA handoff.</h2>
+        <p class="section-intro">
+          Gainz is not trying to replace hosted crypto tax platforms for fast account sync or one-click filing.
+          Its lane is offline reconciliation for people who need to explain old CSVs, missing basis, current holdings,
+          prior-year evidence, and open review work without first uploading raw tax history.
+        </p>
+        <div class="workflow-grid comparison-grid">
+          <article>
+            <span>Cloud apps</span>
+            <h3>Fast sync and filing</h3>
+            <p>Useful when you want hosted workflows, exchange connections, and direct filing paths.</p>
+          </article>
+          <article>
+            <span>Open-source tools</span>
+            <h3>Private but technical</h3>
+            <p>Useful for technical users, but often less focused on guided review queues and CPA packet handoff.</p>
+          </article>
+          <article>
+            <span>Gainz</span>
+            <h3>Offline reconciliation</h3>
+            <p>Focuses on holdings gaps, missing basis, evidence inventory, work order output, and audit packet structure.</p>
+          </article>
+          <article>
+            <span>Review model</span>
+            <h3>Draft until resolved</h3>
+            <p>Unresolved blockers stay visible in exports and packets instead of being hidden behind a final number.</p>
+          </article>
+        </div>
       </section>
 
       <section id="workflow" class="section-shell">
@@ -130,6 +161,10 @@
           <a href="https://github.com/salexandert/Gainz/blob/main/docs/how-gainz-calculates-basis.md">
             <strong>Basis Methodology</strong>
             <span>Learn how Gainz links sales to acquisition lots.</span>
+          </a>
+          <a href="https://github.com/salexandert/Gainz/blob/main/docs/guides/offline-privacy-and-network-transparency.md">
+            <strong>Offline Privacy</strong>
+            <span>See what Gainz stores locally and how packet evidence is handled.</span>
           </a>
         </div>
       </section>
@@ -194,23 +229,39 @@
       <section id="privacy" class="privacy-band">
         <div>
           <div class="section-kicker">Privacy and control</div>
-          <h2>Local-first by design.</h2>
+          <h2>Offline and private by design.</h2>
           <p>
-            Gainz runs on your computer. No cloud upload is required, and source
-            records stay under your control unless you choose to share exported files.
+            Gainz runs on your computer. It does not require a hosted account, exchange API sync,
+            wallet sync, or transaction-history upload for the reconciliation workflow. Tax evidence
+            scans default to reference-only records unless you explicitly choose packet copy.
           </p>
         </div>
         <ul>
-          <li>No required cloud import</li>
+          <li>No required transaction-history upload</li>
           <li>Desktop workflow for Windows and macOS</li>
-          <li>User-controlled source files</li>
+          <li>Reference-only tax evidence by default</li>
         </ul>
+      </section>
+
+      <section class="section-shell">
+        <div class="section-kicker">Fit</div>
+        <h2>Who Gainz is for.</h2>
+        <div class="docs-grid fit-grid">
+          <a href="https://github.com/salexandert/Gainz/wiki/Using-Gainz-From-Import-To-Audit-Packet">
+            <strong>Good fit</strong>
+            <span>Historical CSVs, missing basis, current holdings gaps, evidence inventory, privacy-sensitive review, and CPA handoff.</span>
+          </a>
+          <a href="https://github.com/salexandert/Gainz/releases">
+            <strong>Not the goal</strong>
+            <span>One-click exchange sync, hosted filing, tax advice, or replacing a qualified professional review.</span>
+          </a>
+        </div>
       </section>
 
       <section class="support-download">
         <article>
           <h2>Download Gainz</h2>
-          <p>Get Gainz 0.2.11 Windows and macOS packages from GitHub. Review release notes before installing or updating.</p>
+          <p>Get Gainz 0.2.12 Windows and macOS packages from GitHub. Review release notes before installing or updating.</p>
           <a class="button button-primary" href="https://github.com/salexandert/Gainz/releases">Download from GitHub</a>
         </article>
         <article id="donate">
