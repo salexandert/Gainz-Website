@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gainz Sample Crypto Audit Packet</title>
+    <meta name="description" content="Download and inspect a synthetic Gainz crypto audit packet with README_FIRST, PACKET_STATUS, FOR_CPAS, evidence manifest, work order, and Form 8949-style totals.">
+    <link rel="canonical" href="https://cryptogainz.store/sample-packet/">
+    <link rel="icon" href="/assets/gainz_logo.png">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Gainz home">
+        <img src="/assets/gainz_logo.png" alt="" width="42" height="42">
+        <span>Gainz</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/sample-packet/">Sample Packet</a>
+        <a href="/guides/">Guides</a>
+        <a href="https://github.com/salexandert/Gainz/wiki">Wiki</a>
+      </nav>
+      <a class="header-download" href="https://github.com/salexandert/Gainz/releases">Download</a>
+    </header>
+
+    <main id="main">
+      <section class="hero sample-hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Synthetic demo output</p>
+          <h1>Inspect a Gainz audit packet.</h1>
+          <p class="hero-lede">
+            This sample ZIP is generated from demo CSVs only. It shows the packet structure,
+            status files, CPA notes, evidence manifest, work order, and Form 8949-style totals
+            before you use Gainz with real data.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="/assets/downloads/gainz-synthetic-audit-packet-sample.zip">Download sample packet</a>
+            <a class="button button-secondary" href="https://github.com/salexandert/Gainz/blob/main/docs/guides/sample-crypto-audit-packet.md">Read the guide</a>
+          </div>
+        </div>
+        <figure class="hero-shot">
+          <img src="/assets/screenshots/gainz-export-audit-readiness.png" alt="Gainz Reports and Export page showing packet preview and readiness details">
+          <figcaption>Reports & Export previews copied files, reference-only evidence, draft status, and unresolved items before packet generation.</figcaption>
+        </figure>
+      </section>
+
+      <section class="section-shell">
+        <div class="section-kicker">Inside the ZIP</div>
+        <h2>What the sample demonstrates.</h2>
+        <div class="sample-packet-grid packet-file-grid">
+          <article>
+            <h3><code>README_FIRST.md</code></h3>
+            <p>Human orientation, folder map, sharing reminder, and where to start.</p>
+          </article>
+          <article>
+            <h3><code>PACKET_STATUS.md</code></h3>
+            <p>Readiness, blockers, warnings, evidence counts, and work order review counts.</p>
+          </article>
+          <article>
+            <h3><code>FOR_CPAS.md</code></h3>
+            <p>CPA-facing review order and professional-judgment prompts.</p>
+          </article>
+          <article>
+            <h3><code>CPA_HANDOFF.md</code></h3>
+            <p>How Gainz generated the packet and what source material should be checked.</p>
+          </article>
+          <article>
+            <h3><code>PRIVACY_AND_EVIDENCE_HANDLING.md</code></h3>
+            <p>Reference-only evidence, copied evidence, local storage, and sharing cautions.</p>
+          </article>
+          <article>
+            <h3><code>03_manifests/evidence_manifest.csv</code></h3>
+            <p>Copied source files, reference-only evidence records, missing paths, sizes, and hashes.</p>
+          </article>
+          <article>
+            <h3><code>01_reports/reconciliation_work_order.csv</code></h3>
+            <p>Itemized review queue with priority, issue, recommended action, and review decision columns.</p>
+          </article>
+          <article>
+            <h3><code>01_reports/form_8949_totals.csv</code></h3>
+            <p>Short-term, long-term, and total proceeds, basis, and gain/loss from linked lots.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell">
+        <div class="section-kicker">Synthetic totals</div>
+        <h2>Demo output, not tax advice.</h2>
+        <p class="section-intro">
+          The sample is intentionally small and synthetic. It is meant to help users and CPAs inspect
+          the output shape before deciding whether Gainz fits a real review workflow.
+        </p>
+        <div class="workflow-grid">
+          <article>
+            <span>Short-term</span>
+            <h3>$1,400 gain</h3>
+            <p>One synthetic short-term Form 8949-style row.</p>
+          </article>
+          <article>
+            <span>Long-term</span>
+            <h3>$1,900 gain</h3>
+            <p>Two synthetic long-term rows from demo source files.</p>
+          </article>
+          <article>
+            <span>Evidence</span>
+            <h3>Reference only</h3>
+            <p>Tax evidence records are listed but not copied into the sample packet.</p>
+          </article>
+          <article>
+            <span>Status</span>
+            <h3>Review packet</h3>
+            <p>No unresolved blocker groups are present in this synthetic sample.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="disclaimer">
+        <h2>Important disclaimer</h2>
+        <p>
+          Gainz helps organize crypto records and generate review materials. It does not provide
+          tax, legal, financial, investment, accounting, or other professional advice. Review any real
+          output with source records and a qualified tax professional.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Gainz</strong>
+        <span>Public website for cryptogainz.store.</span>
+      </div>
+      <nav aria-label="Footer navigation">
+        <a href="https://github.com/salexandert/Gainz">GitHub</a>
+        <a href="https://github.com/salexandert/Gainz/wiki">Wiki</a>
+        <a href="https://github.com/salexandert/Gainz/releases">Download</a>
+      </nav>
+    </footer>
+  </body>
+</html>
