@@ -284,6 +284,7 @@ nav a:focus {
 
 .workflow-grid p,
 .section-heading-row p,
+.sample-packet-grid p,
 .support-download p,
 .privacy-band p,
 .disclaimer p {
@@ -330,6 +331,34 @@ nav a:focus {
 
 .screenshot-grid span {
   color: var(--muted);
+}
+
+.sample-packet-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, .8fr);
+  gap: 1rem;
+}
+
+.sample-packet-grid article {
+  padding: 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--soft);
+}
+
+.sample-packet-grid h3 {
+  margin-top: 0;
+}
+
+.sample-packet-grid ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+
+.sample-packet-grid code {
+  color: var(--ink);
+  font-weight: 750;
 }
 
 .privacy-band {
@@ -417,6 +446,7 @@ nav a:focus {
   .workflow-grid,
   .docs-grid,
   .fit-grid,
+  .sample-packet-grid,
   .screenshot-grid {
     grid-template-columns: 1fr;
   }
