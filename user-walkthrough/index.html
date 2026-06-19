@@ -4,11 +4,124 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gainz Walkthrough</title>
-    <meta http-equiv="refresh" content="0; url=https://github.com/salexandert/Gainz/wiki/Using-Gainz-From-Import-To-Audit-Packet">
-    <link rel="canonical" href="https://github.com/salexandert/Gainz/wiki/Using-Gainz-From-Import-To-Audit-Packet">
+    <meta name="description" content="A concise Gainz walkthrough from import to holdings reconciliation, guided review queue, and audit packet export.">
+    <link rel="canonical" href="https://cryptogainz.store/user-walkthrough/">
+    <link rel="icon" href="/assets/gainz_logo.png">
+    <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
-    <p>Redirecting to the current Gainz walkthrough on GitHub Wiki.</p>
-    <p><a href="https://github.com/salexandert/Gainz/wiki/Using-Gainz-From-Import-To-Audit-Packet">Open the Gainz walkthrough</a></p>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Gainz home">
+        <img src="/assets/gainz_logo.png" alt="" width="42" height="42">
+        <span>Gainz</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="/start-here/">Start Here</a>
+        <a href="/download/">Download</a>
+        <a href="/sample-packet/">Sample Packet</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="https://github.com/salexandert/Gainz/wiki">Wiki</a>
+      </nav>
+      <a class="header-download" href="/download/">Download</a>
+    </header>
+
+    <main id="main">
+      <section class="hero guide-hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Walkthrough</p>
+          <h1>From CSVs to a draft packet.</h1>
+          <p class="hero-lede">
+            Gainz is built around review, not magic. Import what you have, declare what you hold,
+            review what is missing, then generate a packet that shows both results and open questions.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://github.com/salexandert/Gainz/wiki/Using-Gainz-From-Import-To-Audit-Packet">Open full screenshot walkthrough</a>
+            <a class="button button-secondary" href="/download/">Download Gainz</a>
+          </div>
+        </div>
+        <figure class="hero-shot">
+          <img src="/assets/screenshots/gainz-home.png" alt="Gainz Dashboard showing readiness summary and workflow cards">
+          <figcaption>The Dashboard tells you where to go next instead of making you inspect raw tables first.</figcaption>
+        </figure>
+      </section>
+
+      <section class="section-shell">
+        <div class="section-kicker">Workflow</div>
+        <h2>The review sequence.</h2>
+        <div class="start-steps">
+          <article>
+            <span>1</span>
+            <h3>Import</h3>
+            <p>Load exchange CSVs or demo data. Review warnings and source overlaps before relying on reports.</p>
+          </article>
+          <article>
+            <span>2</span>
+            <h3>Reconcile holdings</h3>
+            <p>Enter current holdings. Gainz compares declared holdings to imported buys, sells, sends, receives, and lots.</p>
+          </article>
+          <article>
+            <span>3</span>
+            <h3>Run basis review</h3>
+            <p>Use FIFO Auto Link when sales need basis links. Missing basis stays visible as a blocker.</p>
+          </article>
+          <article>
+            <span>4</span>
+            <h3>Review tax evidence</h3>
+            <p>Scan by reference, confirm filed totals, and keep prior-year evidence separate from calculations.</p>
+          </article>
+          <article>
+            <span>5</span>
+            <h3>Finish the packet</h3>
+            <p>Use the Guided Review Queue, preview the packet, acknowledge draft status when needed, and export.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell">
+        <div class="section-kicker">Outputs</div>
+        <h2>What the packet gives you.</h2>
+        <div class="docs-grid">
+          <article>
+            <h3>CPA orientation</h3>
+            <p>`FOR_CPAS.md` and `CPA_HANDOFF.md` explain status, review order, and taxpayer questions.</p>
+          </article>
+          <article>
+            <h3>Status and blockers</h3>
+            <p>`PACKET_STATUS.md` and the work order list unresolved issues instead of hiding them.</p>
+          </article>
+          <article>
+            <h3>Evidence manifest</h3>
+            <p>Copied files, reference-only evidence, missing paths, sizes, and hashes are itemized.</p>
+          </article>
+          <article>
+            <h3>Generated reports</h3>
+            <p>Workbook, Form 8949-style CSVs, holdings reconciliation, import warnings, and tax evidence inventory.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="callout-panel">
+        <h2>Want to see the output first?</h2>
+        <p>Inspect the synthetic sample packet before importing your own transaction history.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="/sample-packet/">Open sample packet page</a>
+          <a class="button button-secondary" href="/privacy/">Review privacy model</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Gainz</strong>
+        <span>Public website for cryptogainz.store.</span>
+      </div>
+      <nav aria-label="Footer navigation">
+        <a href="/">Home</a>
+        <a href="/start-here/">Start Here</a>
+        <a href="/guides/">Guides</a>
+        <a href="https://github.com/salexandert/Gainz/wiki">Wiki</a>
+      </nav>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Privacy | Gainz</title>
+    <meta name="description" content="How Gainz handles local files, network access, synced folders, evidence references, and deletion for private offline crypto tax reconciliation.">
+    <link rel="canonical" href="https://cryptogainz.store/privacy/">
+    <link rel="icon" href="/assets/gainz_logo.png">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Gainz home">
+        <img src="/assets/gainz_logo.png" alt="" width="42" height="42">
+        <span>Gainz</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="/start-here/">Start Here</a>
+        <a href="/download/">Download</a>
+        <a href="/sample-packet/">Sample Packet</a>
+        <a href="/guides/">Guides</a>
+        <a href="https://github.com/salexandert/Gainz/wiki">Wiki</a>
+      </nav>
+      <a class="header-download" href="/download/">Download</a>
+    </header>
+
+    <main id="main">
+      <section class="hero privacy-hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Privacy model</p>
+          <h1>Offline by default. Local files by design.</h1>
+          <p class="hero-lede">
+            Gainz does not require a hosted account, exchange API sync, wallet sync, or transaction-history upload.
+            It runs a local desktop/web interface on your computer and writes human-readable files.
+          </p>
+          <div class="trust-row" aria-label="Privacy summary">
+            <span>No required transaction upload</span>
+            <span>Reference-only tax evidence by default</span>
+            <span>Local XLSX/CSV/Markdown outputs</span>
+          </div>
+        </div>
+        <aside class="trust-panel">
+          <h2>Important limit</h2>
+          <p>
+            The local Gainz password protects the browser interface. It does not encrypt source CSVs,
+            saves, exports, or audit packet files on disk.
+          </p>
+        </aside>
+      </section>
+
+      <section class="section-shell">
+        <div class="section-kicker">What Gainz stores</div>
+        <h2>Files stay where you put them.</h2>
+        <div class="mini-proof-grid">
+          <article>
+            <h3>Imported transactions</h3>
+            <p>Imported CSV rows are stored in local Gainz save files so the app can reopen your review later.</p>
+          </article>
+          <article>
+            <h3>Exports and packets</h3>
+            <p>Generated XLSX, CSV, JSON, Markdown, and packet folders are written to a folder you choose.</p>
+          </article>
+          <article>
+            <h3>Evidence references</h3>
+            <p>Tax evidence scans default to reference-only records. The packet lists paths or labels without copying the files.</p>
+          </article>
+          <article>
+            <h3>Explicit copies</h3>
+            <p>Tax evidence files are copied into a packet only when you explicitly mark them for packet copy.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell">
+        <div class="section-kicker">Network</div>
+        <h2>What may touch the internet.</h2>
+        <p class="section-intro">
+          The reconciliation workflow itself does not require upload or cloud sync. Internet access may happen when you choose
+          external actions such as opening the public website, GitHub releases, documentation, donation links, or update/download links.
+        </p>
+        <div class="docs-grid fit-grid">
+          <article>
+            <h3>Not uploaded by Gainz</h3>
+            <p>Gainz does not upload transaction history, tax evidence, wallet exports, or audit packets to a Gainz server.</p>
+          </article>
+          <article>
+            <h3>Synced folders</h3>
+            <p>If you store files in OneDrive, iCloud, Dropbox, Google Drive, or another sync folder, that service may sync them.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell">
+        <div class="section-kicker">Delete local data</div>
+        <h2>You control the local files.</h2>
+        <ol class="plain-list">
+          <li>Close Gainz.</li>
+          <li>Back up anything you want to keep.</li>
+          <li>Delete generated exports or audit packet folders you created.</li>
+          <li>Delete local Gainz save, upload, log, and instance folders if you want to reset the app state.</li>
+          <li>Remove files from any synced-folder trash or cloud recycle bin if they were stored in a sync service.</li>
+        </ol>
+        <p class="section-intro">
+          For the app-level walkthrough, open Privacy Mode inside Gainz. It shows the current local data folder paths for that installation.
+        </p>
+      </section>
+
+      <section class="callout-panel">
+        <h2>Want to inspect the privacy model in a packet?</h2>
+        <p>
+          The synthetic sample packet includes `PRIVACY_AND_EVIDENCE_HANDLING.md` and an evidence manifest
+          showing copied, reference-only, and missing evidence statuses.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="/sample-packet/">Open sample packet page</a>
+          <a class="button button-secondary" href="https://github.com/salexandert/Gainz/blob/main/docs/guides/offline-privacy-and-network-transparency.md">Read detailed guide</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Gainz</strong>
+        <span>Public website for cryptogainz.store.</span>
+      </div>
+      <nav aria-label="Footer navigation">
+        <a href="/">Home</a>
+        <a href="/download/">Download</a>
+        <a href="/start-here/">Start Here</a>
+        <a href="https://github.com/salexandert/Gainz/wiki">Wiki</a>
+      </nav>
+    </footer>
+  </body>
+</html>

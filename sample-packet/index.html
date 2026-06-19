@@ -18,11 +18,13 @@
       </a>
       <nav aria-label="Primary navigation">
         <a href="/">Home</a>
+        <a href="/start-here/">Start Here</a>
         <a href="/sample-packet/">Sample Packet</a>
         <a href="/guides/">Guides</a>
+        <a href="/privacy/">Privacy</a>
         <a href="https://github.com/salexandert/Gainz/wiki">Wiki</a>
       </nav>
-      <a class="header-download" href="https://github.com/salexandert/Gainz/releases">Download</a>
+      <a class="header-download" href="/download/">Download</a>
     </header>
 
     <main id="main">
@@ -39,11 +41,39 @@
             <a class="button button-primary" href="/assets/downloads/gainz-synthetic-audit-packet-sample.zip">Download sample packet</a>
             <a class="button button-secondary" href="https://github.com/salexandert/Gainz/blob/main/docs/guides/sample-crypto-audit-packet.md">Read the guide</a>
           </div>
+          <div class="trust-row" aria-label="Sample packet metadata">
+            <span>Gainz 0.2.16 format</span>
+            <span>Generated June 18, 2026</span>
+            <span>Synthetic demo data only</span>
+          </div>
         </div>
         <figure class="hero-shot">
           <img src="/assets/screenshots/gainz-export-audit-readiness.png" alt="Gainz Reports and Export page showing packet preview and readiness details">
           <figcaption>Reports & Export previews copied files, reference-only evidence, draft status, and unresolved items before packet generation.</figcaption>
         </figure>
+      </section>
+
+      <section class="section-shell">
+        <div class="section-kicker">Open these first</div>
+        <h2>Start with the orientation files.</h2>
+        <div class="docs-grid">
+          <article>
+            <h3><code>README_FIRST.md</code></h3>
+            <p>Human starting point, folder map, sharing note, and suggested review path.</p>
+          </article>
+          <article>
+            <h3><code>PACKET_STATUS.md</code></h3>
+            <p>Readiness status, blocker groups, evidence counts, warnings, and draft notes.</p>
+          </article>
+          <article>
+            <h3><code>FOR_CPAS.md</code></h3>
+            <p>CPA-facing review order, evidence handling summary, and taxpayer questions.</p>
+          </article>
+          <article>
+            <h3><code>03_manifests/evidence_manifest.csv</code></h3>
+            <p>Copied files, reference-only evidence records, missing paths, file sizes, and hashes.</p>
+          </article>
+        </div>
       </section>
 
       <section class="section-shell">
@@ -168,6 +198,18 @@
         </div>
       </section>
 
+      <section class="section-shell">
+        <div class="section-kicker">Verify sample ZIP</div>
+        <h2>Sample checksum.</h2>
+        <p class="section-intro">
+          If you want to verify the downloaded sample ZIP, compare its SHA-256 hash with this value.
+        </p>
+        <div class="checksum-block checksum-block-large">
+          <span>SHA-256</span>
+          <code>608a6eb8cb907454fb145c687d265b195ae177ea2e7f2a6df98d125b406a3545</code>
+        </div>
+      </section>
+
       <section class="disclaimer">
         <h2>Important disclaimer</h2>
         <p>
@@ -186,7 +228,7 @@
       <nav aria-label="Footer navigation">
         <a href="https://github.com/salexandert/Gainz">GitHub</a>
         <a href="https://github.com/salexandert/Gainz/wiki">Wiki</a>
-        <a href="https://github.com/salexandert/Gainz/releases">Download</a>
+        <a href="/download/">Download</a>
       </nav>
     </footer>
   </body>
