@@ -86,6 +86,58 @@
       </section>
 
       <section class="section-shell">
+        <div class="section-kicker">Folder tree</div>
+        <h2>How the packet is organized.</h2>
+        <p class="section-intro">
+          The sample packet keeps orientation notes at the root, generated reports in one folder,
+          copied source files in another, and manifests in a separate verification folder.
+        </p>
+        <div class="packet-tree" aria-label="Sample audit packet folder tree">
+          <ul>
+            <li>
+              <span>gainz_audit_packet_SAMPLE/</span>
+              <ul>
+                <li><code>README_FIRST.md</code></li>
+                <li><code>PACKET_STATUS.md</code></li>
+                <li><code>FOR_CPAS.md</code></li>
+                <li><code>CPA_HANDOFF.md</code></li>
+                <li><code>PRIVACY_AND_EVIDENCE_HANDLING.md</code></li>
+                <li>
+                  <span>00_memos/</span>
+                  <ul>
+                    <li><code>METHODOLOGY.md</code></li>
+                  </ul>
+                </li>
+                <li>
+                  <span>01_reports/</span>
+                  <ul>
+                    <li><code>Export_...xlsx</code></li>
+                    <li><code>reconciliation_work_order.csv</code></li>
+                    <li><code>form_8949_totals.csv</code></li>
+                    <li><code>holdings_reconciliation.csv</code></li>
+                  </ul>
+                </li>
+                <li>
+                  <span>02_source_files/</span>
+                  <ul>
+                    <li><code>transactions/</code></li>
+                    <li><code>tax_evidence/</code> <em>only when explicitly copied</em></li>
+                  </ul>
+                </li>
+                <li>
+                  <span>03_manifests/</span>
+                  <ul>
+                    <li><code>evidence_manifest.csv</code></li>
+                    <li><code>audit_packet_summary.json</code></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section-shell">
         <div class="section-kicker">Synthetic totals</div>
         <h2>Demo output, not tax advice.</h2>
         <p class="section-intro">

@@ -361,6 +361,51 @@ nav a:focus {
   font-weight: 750;
 }
 
+.packet-tree {
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f7faf9;
+  overflow-x: auto;
+}
+
+.packet-tree ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  list-style: none;
+}
+
+.packet-tree li {
+  position: relative;
+  margin: .45rem 0;
+  padding-left: 1.1rem;
+  color: var(--muted);
+}
+
+.packet-tree li::before {
+  content: "";
+  position: absolute;
+  top: .72rem;
+  left: 0;
+  width: .7rem;
+  border-top: 1px solid #aac4bb;
+}
+
+.packet-tree span {
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.packet-tree code {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.packet-tree em {
+  color: var(--muted);
+  font-style: normal;
+}
+
 .privacy-band {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, .5fr);
