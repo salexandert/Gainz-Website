@@ -30,35 +30,10 @@ The Gainz desktop app lives separately at <https://github.com/salexandert/Gainz>
 Use privacy-preserving aggregate analytics for the public website only.
 
 - Netlify Web Analytics is the preferred current setup because it can be enabled in Netlify project settings without adding a tracking script to this repo.
-- If a client-side provider is needed later, use Plausible, GoatCounter, Cloudflare Web Analytics, or a similar cookieless aggregate analytics tool.
 - Do not add ad pixels, remarketing tags, or broad behavioral tracking.
 - Do not add any local Gainz app telemetry. The desktop app must not upload transaction history, tax evidence, audit packets, or user actions to this website.
 
 Public GitHub Release download counts are tracked separately by the Gainz app repository workflow under `metrics/github-release-downloads/`.
-
-## Search Console And Bing
-
-Search verification requires account-owned tokens or DNS access. Preferred setup:
-
-1. Add `https://cryptogainz.store/` in Google Search Console.
-2. Verify with DNS TXT when possible so no verification token needs to live in this repo.
-3. Submit `https://cryptogainz.store/sitemap.xml`.
-4. Add the same site in Bing Webmaster Tools, or import the verified site from Google Search Console.
-5. Submit `https://cryptogainz.store/sitemap.xml` in Bing.
-
-If Google or Bing requires an HTML file or meta tag instead of DNS, add the exact provided token in a focused commit and do not invent placeholder verification values.
-
-## Long-Tail Page Targets
-
-Favor specific reconciliation problems over broad "best crypto tax software" pages:
-
-- missing crypto cost basis
-- wrong crypto holdings
-- 1099-DA reconciliation
-- crypto audit packet
-- offline crypto tax software
-- Cash App Bitcoin CSV
-- Coinbase/GDAX missing basis
 
 ## Public Data Rule
 

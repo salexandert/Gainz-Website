@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Website Analytics And Search | Gainz</title>
-    <meta name="description" content="How the Gainz public website uses privacy-preserving aggregate analytics, GitHub release download counts, and search webmaster tools.">
+    <title>Website Analytics | Gainz</title>
+    <meta name="description" content="How the Gainz public website uses privacy-preserving aggregate analytics and public GitHub release download counts without local app telemetry.">
     <link rel="canonical" href="https://cryptogainz.store/analytics/">
     <link rel="icon" href="/assets/gainz_logo.png">
     <link rel="stylesheet" href="/styles.css">
@@ -32,8 +32,8 @@
           <p class="eyebrow">Website transparency</p>
           <h1>Privacy-preserving analytics for the public website.</h1>
           <p class="hero-lede">
-            Gainz needs basic public-site feedback: which pages are useful, whether downloads happen,
-            and whether search engines can find the right pages. That does not require tracking app users or tax data.
+            Gainz uses aggregate public-site feedback, such as page visits and release downloads,
+            without tracking local app users, transaction history, tax evidence, or audit packets.
           </p>
         </div>
         <aside class="trust-panel">
@@ -55,40 +55,14 @@
             <p>GitHub Release asset download counts are public aggregate numbers. Gainz snapshots those counts daily in the app repository.</p>
           </article>
           <article>
-            <h3>Search indexing</h3>
-            <p>Google Search Console and Bing Webmaster Tools are used to submit the sitemap and inspect indexing health.</p>
-          </article>
-          <article>
             <h3>No app telemetry</h3>
             <p>The local Gainz app does not upload transaction history, tax evidence, audit packets, or usage events to the website.</p>
           </article>
+          <article>
+            <h3>Offline boundary</h3>
+            <p>Website analytics apply to cryptogainz.store, not to reconciliation work performed on your computer.</p>
+          </article>
         </div>
-      </section>
-
-      <section class="section-shell">
-        <div class="section-kicker">Provider rule</div>
-        <h2>Keep analytics privacy-preserving.</h2>
-        <p class="section-intro">
-          If a client-side analytics provider is ever added, it should be a privacy-preserving option such as Plausible,
-          GoatCounter, Cloudflare Web Analytics, or a similar cookieless aggregate analytics tool. Avoid ad pixels,
-          remarketing tags, and broad behavioral tracking.
-        </p>
-      </section>
-
-      <section class="section-shell">
-        <div class="section-kicker">Search setup</div>
-        <h2>Verification still needs account-owned tokens.</h2>
-        <ol class="plain-list">
-          <li>Add <code>https://cryptogainz.store/</code> in Google Search Console and Bing Webmaster Tools.</li>
-          <li>Use DNS TXT verification when possible so verification is not tied to a file in the repo.</li>
-          <li>Submit <code>https://cryptogainz.store/sitemap.xml</code> after verification.</li>
-          <li>Use the search tools to watch indexing errors, not to track local app users.</li>
-        </ol>
-      </section>
-
-      <section class="disclaimer">
-        <h2>Privacy line</h2>
-        <p>Gainz can measure public website interest without collecting private reconciliation activity. Keep those worlds separate.</p>
       </section>
     </main>
 
