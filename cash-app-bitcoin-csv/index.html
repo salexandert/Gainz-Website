@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cash App Bitcoin CSV Reconciliation | Gainz</title>
+    <meta name="description" content="Import and review Cash App Bitcoin CSV exports in Gainz, including missing USD values, holdings gaps, and CPA packet output.">
+    <link rel="canonical" href="https://cryptogainz.store/cash-app-bitcoin-csv/">
+    <link rel="icon" href="/assets/gainz_logo.png">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Gainz home">
+        <img src="/assets/gainz_logo.png" alt="" width="42" height="42">
+        <span>Gainz</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="/start-here/">Start Here</a>
+        <a href="/download/">Download</a>
+        <a href="/guides/">Guides</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="https://github.com/salexandert/Gainz/wiki">Wiki</a>
+      </nav>
+      <a class="header-download" href="/download/">Download</a>
+    </header>
+
+    <main id="main">
+      <section class="hero guide-hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Cash App CSVs</p>
+          <h1>Review Cash App Bitcoin exports without uploading the file to a cloud tax app.</h1>
+          <p class="hero-lede">
+            Gainz imports Cash App-style Bitcoin CSVs, surfaces missing USD value warnings,
+            and keeps unresolved rows visible in the review queue and draft packet.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="/download/">Download Gainz</a>
+            <a class="button button-secondary" href="https://github.com/salexandert/Gainz/blob/main/docs/guides/cash-app-bitcoin-tax-csv.md">Read Cash App guide</a>
+          </div>
+        </div>
+        <figure class="hero-shot">
+          <img src="/assets/screenshots/gainz-import-manage-data.png" alt="Gainz Import page with CSV upload and source review">
+          <figcaption>Import handles CSV upload, data sources, revisions, and reviewable warnings.</figcaption>
+        </figure>
+      </section>
+
+      <section class="section-shell">
+        <div class="section-kicker">What to review</div>
+        <h2>Cash App rows can still need context.</h2>
+        <div class="docs-grid">
+          <article>
+            <h3>USD values</h3>
+            <p>Rows with missing or zero USD spot price should be reviewed before relying on reports.</p>
+          </article>
+          <article>
+            <h3>Transfers</h3>
+            <p>Bitcoin withdrawals may be owner transfers, disposals, or records that need source-backed notes.</p>
+          </article>
+          <article>
+            <h3>Holdings</h3>
+            <p>Declared current BTC holdings help identify missing historical records or unresolved activity.</p>
+          </article>
+          <article>
+            <h3>CPA packet</h3>
+            <p>Draft packets keep warnings and review decisions visible for handoff.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell">
+        <div class="section-kicker">Need a parser fix?</div>
+        <h2>Cash App exports can change over time.</h2>
+        <p class="section-intro">
+          If Gainz cannot identify the columns, open a parser request with sanitized headers and synthetic rows.
+          Do not upload your real export to GitHub.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://github.com/salexandert/Gainz/issues/new/choose">Request parser support</a>
+          <a class="button button-secondary" href="https://github.com/salexandert/Gainz/blob/main/SUPPORT.md">Read support guide</a>
+        </div>
+      </section>
+
+      <section class="disclaimer">
+        <h2>Not tax advice</h2>
+        <p>Gainz organizes Cash App records for review. Validate reports with source records and a qualified tax professional.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Gainz</strong>
+        <span>Private offline crypto tax reconciliation.</span>
+      </div>
+      <nav aria-label="Footer navigation">
+        <a href="/">Home</a>
+        <a href="/guides/">Guides</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/download/">Download</a>
+      </nav>
+    </footer>
+  </body>
+</html>

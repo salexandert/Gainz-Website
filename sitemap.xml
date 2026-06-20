@@ -28,4 +28,36 @@
     <loc>https://cryptogainz.store/sample-packet/</loc>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://cryptogainz.store/missing-cost-basis/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cryptogainz.store/wrong-crypto-holdings/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cryptogainz.store/1099-da-reconciliation/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cryptogainz.store/crypto-audit-packet/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cryptogainz.store/offline-crypto-tax-software/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cryptogainz.store/cash-app-bitcoin-csv/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cryptogainz.store/coinbase-gdax-missing-basis/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cryptogainz.store/analytics/</loc>
+    <priority>0.5</priority>
+  </url>
 </urlset>

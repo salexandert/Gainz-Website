@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Coinbase and GDAX Missing Basis | Gainz</title>
+    <meta name="description" content="Use Gainz to review Coinbase and Coinbase Pro/GDAX missing basis, old transfers, overlapping exports, and acquisition gaps.">
+    <link rel="canonical" href="https://cryptogainz.store/coinbase-gdax-missing-basis/">
+    <link rel="icon" href="/assets/gainz_logo.png">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Gainz home">
+        <img src="/assets/gainz_logo.png" alt="" width="42" height="42">
+        <span>Gainz</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="/start-here/">Start Here</a>
+        <a href="/download/">Download</a>
+        <a href="/guides/">Guides</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="https://github.com/salexandert/Gainz/wiki">Wiki</a>
+      </nav>
+      <a class="header-download" href="/download/">Download</a>
+    </header>
+
+    <main id="main">
+      <section class="hero guide-hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Coinbase and GDAX</p>
+          <h1>Missing basis often starts with old Coinbase, Pro, or GDAX history.</h1>
+          <p class="hero-lede">
+            Gainz imports Coinbase CSVs and Coinbase Pro/GDAX fills, then helps review converts,
+            transfers, overlapping exports, and sales that still need earlier acquisition basis.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="/download/">Download Gainz</a>
+            <a class="button button-secondary" href="https://github.com/salexandert/Gainz/blob/main/docs/guides/coinbase-missing-cost-basis.md">Read Coinbase guide</a>
+          </div>
+        </div>
+        <figure class="hero-shot">
+          <img src="/assets/screenshots/gainz-import-manage-data.png" alt="Gainz Import page showing source files and revision history">
+          <figcaption>Import and data-source review help spot overlapping history and parser warnings.</figcaption>
+        </figure>
+      </section>
+
+      <section class="section-shell">
+        <div class="section-kicker">Review questions</div>
+        <h2>Common Coinbase/GDAX basis gaps.</h2>
+        <div class="docs-grid">
+          <article>
+            <h3>Old Pro/GDAX fills</h3>
+            <p>Historical fills may live in a different export from Coinbase retail transaction history.</p>
+          </article>
+          <article>
+            <h3>Converts</h3>
+            <p>Convert rows need both sides represented so proceeds and basis are traceable.</p>
+          </article>
+          <article>
+            <h3>Transfers</h3>
+            <p>Transfers between Coinbase products or wallets can hide acquisition context if only one side is imported.</p>
+          </article>
+          <article>
+            <h3>Duplicate files</h3>
+            <p>Full-history and yearly exports can overlap. Gainz surfaces source overlap warnings for review.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell">
+        <div class="section-kicker">Workflow</div>
+        <h2>Use source files, not guesses.</h2>
+        <ol class="plain-list">
+          <li>Import Coinbase retail transaction exports.</li>
+          <li>Import Coinbase Pro/GDAX fills when available.</li>
+          <li>Review skipped rows, unsupported types, and source overlap warnings.</li>
+          <li>Declare current holdings and run FIFO only after obvious import gaps are reviewed.</li>
+          <li>Use the work order and packet status files to hand unresolved basis questions to a CPA.</li>
+        </ol>
+      </section>
+
+      <section class="disclaimer">
+        <h2>Not tax advice</h2>
+        <p>Gainz helps organize Coinbase/GDAX records and open questions. It does not decide tax treatment or guarantee complete source history.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Gainz</strong>
+        <span>Private offline crypto tax reconciliation.</span>
+      </div>
+      <nav aria-label="Footer navigation">
+        <a href="/">Home</a>
+        <a href="/guides/">Guides</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/download/">Download</a>
+      </nav>
+    </footer>
+  </body>
+</html>
