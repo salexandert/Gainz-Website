@@ -1,0 +1,55 @@
+name: Sync Website From Gainz App
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-website-from-gainz-app
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: windows-latest
+
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+
+      - name: Check out Gainz app
+        uses: actions/checkout@v4
+        with:
+          repository: salexandert/Gainz
+          ref: main
+          path: _gainz_app
+
+      - name: Sync website content
+        shell: pwsh
+        run: .\scripts\sync-from-app.ps1 -AppRepoPath .\_gainz_app
+
+      - name: Remove temporary app checkout
+        if: always()
+        shell: pwsh
+        run: |
+          if (Test-Path -LiteralPath .\_gainz_app) {
+            Remove-Item -LiteralPath .\_gainz_app -Recurse -Force
+          }
+
+      - name: Commit synced website updates
+        shell: pwsh
+        run: |
+          $changes = git status --porcelain
+          if (-not $changes) {
+            Write-Host "Website already matches Gainz app."
+            exit 0
+          }
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md index.html download/index.html sample-packet/index.html assets/screenshots assets/downloads scripts/sync-from-app.ps1
+          git commit -m "Sync website from Gainz app"
+          git push

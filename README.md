@@ -8,14 +8,15 @@ The Gainz desktop app lives separately at <https://github.com/salexandert/Gainz>
 
 - Product documentation and walkthrough content lives in the Gainz app repository and GitHub wiki.
 - This website links users to the wiki and selected guide pages.
-- Website screenshots are copied from the app repository after product UI changes.
+- Website release labels, screenshots, and sample downloads are synced from the app repository after product UI changes.
 - Netlify project `gainzstore` deploys this repository's `main` branch.
+- GitHub Actions can run the website sync on a schedule or on demand, then Netlify deploys the synced site.
 
 ## Update Flow
 
 1. Update the Gainz app and app docs in your local Gainz app checkout.
 2. Regenerate or refresh screenshots in the app repository's `docs/assets/screenshots` folder.
-3. From this repository, run:
+3. From this repository, run the sync script. It reads the app `VERSION`, refreshes release labels, copies screenshots, copies sample downloads, and updates the sample packet checksum.
 
    ```powershell
    .\scripts\sync-from-app.ps1 -AppRepoPath path\to\Gainz
@@ -24,6 +25,8 @@ The Gainz desktop app lives separately at <https://github.com/salexandert/Gainz>
 4. Review the website locally or with Netlify preview.
 5. Commit and push this website repository.
 6. Netlify deploys the public site from the tracked source.
+
+The scheduled `Sync Website From Gainz App` workflow also runs this sync hourly from the Gainz app `main` branch. Use the manual workflow dispatch in GitHub Actions when a release needs the website updated immediately.
 
 ## Website Analytics
 
