@@ -2,8 +2,8 @@ name: Sync Website From Gainz App
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "17 * * * *"
+  repository_dispatch:
+    types: [gainz-app-updated]
 
 permissions:
   contents: write
@@ -24,7 +24,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: salexandert/Gainz
-          ref: main
+          ref: ${{ github.event.client_payload.ref || 'main' }}
           path: _gainz_app
 
       - name: Sync website content
