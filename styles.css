@@ -238,6 +238,7 @@ nav a:focus {
 .docs-grid article {
   display: grid;
   gap: .35rem;
+  min-width: 0;
   min-height: 132px;
   padding: 1.15rem;
   border: 1px solid var(--line);
@@ -268,6 +269,12 @@ nav a:focus {
 
 .docs-grid article p {
   margin: 0;
+}
+
+.docs-grid code {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .fit-grid {
