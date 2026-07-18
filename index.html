@@ -24,7 +24,7 @@
         "name": "Gainz",
         "applicationCategory": "FinanceApplication",
         "operatingSystem": "Windows, macOS",
-        "softwareVersion": "0.2.42",
+        "softwareVersion": "0.2.43",
         "url": "https://cryptogainz.store/",
         "downloadUrl": "https://github.com/salexandert/Gainz/releases/latest/download/Gainz-Windows.zip",
         "description": "Private offline crypto tax reconciliation software for dashboard-guided holdings review, basis links, tax evidence inventory, report exports, and CPA-ready draft audit packet preparation.",
@@ -69,15 +69,15 @@
             <a class="button button-secondary" href="/start-here/">Start here</a>
           </div>
           <div class="trust-row" aria-label="Product assurances">
-            <span>Latest release 0.2.42</span>
+            <span>Latest release 0.2.43</span>
             <span>No transaction upload required</span>
             <span>Reference-only tax evidence by default</span>
             <span>Audit packet exports</span>
           </div>
         </div>
         <figure class="hero-shot">
-          <img src="/assets/screenshots/gainz-home.png" alt="Gainz Reconciliation Dashboard showing summary, next action, review queue, and workflow cards">
-          <figcaption>Dashboard shows the current readiness summary, next action, and review queue.</figcaption>
+          <img src="/assets/screenshots/gainz-home.png" alt="Gainz Guided Reconciliation showing the numbered Import, Declare Holdings, Reconcile, and Review and Export stages">
+          <figcaption>Guided Reconciliation shows the current stage, one next action, examples, and completion criteria.</figcaption>
         </figure>
       </section>
 
@@ -119,23 +119,23 @@
         <div class="workflow-grid">
           <article>
             <span>01</span>
-            <h3>Dashboard</h3>
-            <p>Start with the readiness summary, next action, and review queue.</p>
+            <h3>Import</h3>
+            <p>Load source CSVs and confirm gross values, fees, total cost, and net proceeds.</p>
           </article>
           <article>
             <span>02</span>
-            <h3>Import</h3>
-            <p>Load exchange CSVs, demo files, and source-backed manual rows.</p>
+            <h3>Declare Holdings</h3>
+            <p>Record what you currently hold and set other tracked assets to zero when appropriate.</p>
           </article>
           <article>
             <span>03</span>
             <h3>Reconcile</h3>
-            <p>Declare current holdings and review missing activity before basis work.</p>
+            <p>Review one holdings or missing-basis gap at a time; automatic FIFO uses supported lots first.</p>
           </article>
           <article>
             <span>04</span>
             <h3>Reports & Export</h3>
-            <p>Review readiness, expand details only when needed, then generate outputs.</p>
+            <p>Review assumptions and blockers, then generate a clearly labeled packet for professional review.</p>
           </article>
         </div>
       </section>
@@ -178,7 +178,7 @@
         <h2>Use the current product guide.</h2>
         <p class="section-intro">
           The GitHub wiki is generated from the latest public docs and includes the current
-          Dashboard, Reconcile, Tax Evidence, and Reports & Export flow.
+          Guided Reconciliation, fee-aware Import, Tax Evidence, and Reports & Export flow.
         </p>
         <div class="docs-grid">
           <a href="/user-walkthrough/">
@@ -259,45 +259,38 @@
         </div>
         <div class="screenshot-grid">
           <figure>
-            <img src="/assets/screenshots/gainz-home.png" alt="Gainz Reconciliation Dashboard showing summary, next action, review queue, and workflow cards">
+            <img src="/assets/screenshots/gainz-home.png" alt="Gainz Guided Reconciliation showing the numbered stages and current Import task">
             <figcaption>
-              <strong>Reconciliation Dashboard</strong>
-              <span>Shows the readiness summary, next action, review queue, and workflow cards.</span>
+              <strong>Guided Reconciliation</strong>
+              <span>Shows where the user is, what to do now, examples, and when the stage is complete.</span>
             </figcaption>
           </figure>
           <figure>
-            <img src="/assets/screenshots/gainz-import-manage-data.png" alt="Gainz Import page showing demo data, upload area, current save, data sources, and revision history">
+            <img src="/assets/screenshots/gainz-import-manage-data.png" alt="Gainz Import confirmation showing source gross values, fees, total cost, and net proceeds">
             <figcaption>
-              <strong>Import</strong>
-              <span>Loads CSVs, demo data, source-backed manual rows, data sources, and revisions.</span>
+              <strong>Confirm imported values</strong>
+              <span>Keeps source gross value, fee, fee currency, and tax cost or proceeds separate.</span>
             </figcaption>
           </figure>
           <figure>
-            <img src="/assets/screenshots/gainz-manual-batch-entry.png" alt="Gainz Add Manual Transactions table for entering several manual rows at once">
+            <img src="/assets/screenshots/gainz-holdings-accounting.png" alt="Gainz Reconcile page showing a single BCH missing-basis gap and its exact unsupported quantity">
             <figcaption>
-              <strong>Manual batch entry</strong>
-              <span>Adds several source-backed buys or sells in one reviewed revision.</span>
+              <strong>Reconcile one gap</strong>
+              <span>Explains the selected gap and separates documented basis from the unsupported remainder.</span>
             </figcaption>
           </figure>
           <figure>
-            <img src="/assets/screenshots/gainz-holdings-accounting.png" alt="Gainz Reconcile Holdings page showing holdings summary cards and guided reconciliation steps">
+            <img src="/assets/screenshots/gainz-professional-resolution-preview.png" alt="Gainz professional treatment preview showing source gross value, allocated fee, net proceeds, and before and after Form 8949 totals">
             <figcaption>
-              <strong>Reconcile holdings</strong>
-              <span>Compares declared holdings, imported activity, lot estimates, and review status.</span>
+              <strong>Review calculation impact</strong>
+              <span>Shows exact source economics and before/after totals before a reversible professional-directed treatment is applied.</span>
             </figcaption>
           </figure>
           <figure>
-            <img src="/assets/screenshots/gainz-stats-charts.png" alt="Gainz Stats and Charts page showing advanced reconciliation status and asset-level tables">
-            <figcaption>
-              <strong>Advanced stats and charts</strong>
-              <span>Supports deeper asset-level inspection after Dashboard identifies what to review.</span>
-            </figcaption>
-          </figure>
-          <figure>
-            <img src="/assets/screenshots/gainz-export-audit-readiness.png" alt="Gainz Reports and Export page showing readiness review, review queue, checklist, and output actions">
+            <img src="/assets/screenshots/gainz-export-audit-readiness.png" alt="Gainz Reports and Export page showing packet counts, unresolved items, and material assumptions">
             <figcaption>
               <strong>Reports & Export</strong>
-              <span>Reviews readiness, output location, file generation, and collapsed evidence details.</span>
+              <span>Surfaces imported fee treatment, professional calculation assumptions, evidence counts, and remaining blockers.</span>
             </figcaption>
           </figure>
         </div>
@@ -339,7 +332,7 @@
       <section class="support-download">
         <article>
           <h2>Download Gainz</h2>
-          <p>Get Gainz 0.2.42 Windows and macOS packages from GitHub. Review release notes before installing or updating.</p>
+          <p>Get Gainz 0.2.43 Windows and macOS packages from GitHub. Review release notes before installing or updating.</p>
           <a class="button button-primary" href="/download/">Download Gainz</a>
         </article>
         <article id="donate">

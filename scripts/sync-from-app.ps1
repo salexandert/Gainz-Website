@@ -11,6 +11,7 @@ $screenshotSource = Join-Path $resolvedApp "docs\assets\screenshots"
 $screenshotDestination = Join-Path $repoRoot "assets\screenshots"
 $downloadSource = Join-Path $resolvedApp "docs\assets\downloads"
 $downloadDestination = Join-Path $repoRoot "assets\downloads"
+$sampleMetadataSource = Join-Path $downloadSource "gainz-synthetic-audit-packet-sample.json"
 
 if (-not (Test-Path -LiteralPath $versionPath)) {
     throw "VERSION file not found: $versionPath"
@@ -121,12 +122,33 @@ foreach ($htmlFile in $htmlFiles) {
 $sampleZipPath = Join-Path $downloadDestination "gainz-synthetic-audit-packet-sample.zip"
 if (Test-Path -LiteralPath $sampleZipPath) {
     $sampleHash = (Get-FileHash -Algorithm SHA256 -LiteralPath $sampleZipPath).Hash.ToLowerInvariant()
+    $sampleGeneratedDate = $null
+    if (Test-Path -LiteralPath $sampleMetadataSource) {
+        $sampleMetadata = Get-Content -LiteralPath $sampleMetadataSource -Raw | ConvertFrom-Json
+        if ($sampleMetadata.sha256 -and $sampleMetadata.sha256.ToLowerInvariant() -ne $sampleHash) {
+            throw "Synthetic sample metadata checksum does not match the ZIP."
+        }
+        if ($sampleMetadata.version -and $sampleMetadata.version -ne $version) {
+            throw "Synthetic sample metadata version $($sampleMetadata.version) does not match Gainz $version."
+        }
+        if ($sampleMetadata.generated_date) {
+            $sampleGeneratedDate = [datetime]::ParseExact(
+                $sampleMetadata.generated_date,
+                "yyyy-MM-dd",
+                [System.Globalization.CultureInfo]::InvariantCulture
+            ).ToString("MMMM d, yyyy", [System.Globalization.CultureInfo]::InvariantCulture)
+        }
+    }
     Update-WebsiteFile -RelativePath "sample-packet\index.html" -Updater {
         param($text)
-        [regex]::Replace($text, '(<span>SHA-256</span>\s*<code>)[0-9a-fA-F]{64}(</code>)', {
+        $updated = [regex]::Replace($text, '(<span>SHA-256</span>\s*<code>)[0-9a-fA-F]{64}(</code>)', {
             param($match)
             $match.Groups[1].Value + $sampleHash + $match.Groups[2].Value
         })
+        if ($sampleGeneratedDate) {
+            $updated = [regex]::Replace($updated, 'Generated\s+[A-Z][a-z]+\s+\d{1,2},\s+\d{4}', "Generated $sampleGeneratedDate")
+        }
+        $updated
     }
 }
 

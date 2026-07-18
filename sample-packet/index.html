@@ -33,23 +33,23 @@
           <p class="eyebrow">Synthetic demo output</p>
           <h1>Inspect a Gainz audit packet.</h1>
           <p class="hero-lede">
-            This sample ZIP is generated from demo CSVs only. It shows the packet structure,
-            status files, CPA notes, evidence manifest, work order, and Form 8949-style totals
-            before you use Gainz with real data.
+            This sample ZIP is generated from a synthetic partial-basis Coinbase scenario. It shows
+            fee-inclusive source economics, documented FIFO basis first, the exact unsupported remainder,
+            user-recorded professional direction, and the resulting Form 8949-style workpapers.
           </p>
           <div class="hero-actions">
             <a class="button button-primary" href="/assets/downloads/gainz-synthetic-audit-packet-sample.zip">Download sample packet</a>
             <a class="button button-secondary" href="https://github.com/salexandert/Gainz/blob/main/docs/guides/sample-crypto-audit-packet.md">Read the guide</a>
           </div>
           <div class="trust-row" aria-label="Sample packet metadata">
-            <span>Gainz 0.2.42 format</span>
-            <span>Generated June 22, 2026</span>
+            <span>Gainz 0.2.43 format</span>
+            <span>Generated July 18, 2026</span>
             <span>Synthetic demo data only</span>
           </div>
         </div>
         <figure class="hero-shot">
-          <img src="/assets/screenshots/gainz-export-audit-readiness.png" alt="Gainz Reports and Export page showing packet preview and readiness details">
-          <figcaption>Reports & Export previews copied files, reference-only evidence, draft status, and unresolved items before packet generation.</figcaption>
+          <img src="/assets/screenshots/gainz-professional-resolution-preview.png" alt="Gainz calculation receipt showing source gross value, allocated fee, net proceeds, and exact before and after totals">
+          <figcaption>The synthetic receipt preserves the $5.50 total source fees and produces the expected $469.50 gain.</figcaption>
         </figure>
       </section>
 
@@ -116,6 +116,14 @@
             <h3><code>01_reports/form_8949_totals.csv</code></h3>
             <p>Short-term, long-term, and total proceeds, basis, and gain/loss from linked lots.</p>
           </article>
+          <article>
+            <h3><code>01_reports/import_economics.csv</code></h3>
+            <p>Source gross values, fees, fee currency, total cost, and net sale proceeds.</p>
+          </article>
+          <article>
+            <h3><code>01_reports/cpa_resolution_workpapers.csv</code></h3>
+            <p>Exact unsupported quantity, recorded professional direction, evidence, assumption, receipt, and reversal identifiers.</p>
+          </article>
         </div>
       </section>
 
@@ -148,6 +156,8 @@
                     <li><code>Export_...xlsx</code></li>
                     <li><code>reconciliation_work_order.csv</code></li>
                     <li><code>unknown_gap_memos.md</code></li>
+                    <li><code>import_economics.csv</code></li>
+                    <li><code>cpa_resolution_workpapers.csv</code></li>
                     <li><code>form_8949_totals.csv</code></li>
                     <li><code>holdings_reconciliation.csv</code></li>
                   </ul>
@@ -155,8 +165,7 @@
                 <li>
                   <span>02_source_files/</span>
                   <ul>
-                    <li><code>transactions/</code></li>
-                    <li><code>tax_evidence/</code> <em>only when explicitly copied</em></li>
+                    <li><code>coinbase_partial_basis_fee_sample.csv</code></li>
                   </ul>
                 </li>
                 <li>
@@ -181,23 +190,23 @@
         <div class="workflow-grid">
           <article>
             <span>Short-term</span>
-            <h3>$1,400 gain</h3>
-            <p>One synthetic short-term Form 8949-style row.</p>
+            <h3>$297 gain</h3>
+            <p>The exact unsupported 0.3 BCH remainder, with a blank acquisition date and recorded short-term assumption.</p>
           </article>
           <article>
             <span>Long-term</span>
-            <h3>$1,900 gain</h3>
-            <p>Two synthetic long-term rows from demo source files.</p>
+            <h3>$172.50 gain</h3>
+            <p>The documented 0.2 BCH FIFO lot, including its $0.50 acquisition fee.</p>
           </article>
           <article>
-            <span>Evidence</span>
-            <h3>Reference only</h3>
-            <p>Tax evidence records are listed but not copied into the sample packet.</p>
+            <span>Source fees</span>
+            <h3>$5.50 included</h3>
+            <p>The $5 sale fee reduces proceeds and the $0.50 buy fee increases basis.</p>
           </article>
           <article>
-            <span>Status</span>
-            <h3>Review packet</h3>
-            <p>No unresolved blocker groups are present in this synthetic sample.</p>
+            <span>Total</span>
+            <h3>$469.50 gain</h3>
+            <p>Reconciliation complete, with professional filing review still required.</p>
           </article>
         </div>
       </section>
@@ -210,7 +219,7 @@
         </p>
         <div class="checksum-block checksum-block-large">
           <span>SHA-256</span>
-          <code>cccb56e441decec0b3c4c9ac3c0bb92cc56c4d1225c2d03937eb032493353ea2</code>
+          <code>af66034015d41a081dd862b93dcb1ece88463c0fd01fe9ca5cc26f337001e670</code>
         </div>
       </section>
 
