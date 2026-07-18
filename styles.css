@@ -350,6 +350,7 @@ nav a:focus {
 }
 
 .sample-packet-grid article {
+  min-width: 0;
   padding: 1.2rem;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -369,6 +370,8 @@ nav a:focus {
 .sample-packet-grid code {
   color: var(--ink);
   font-weight: 750;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .download-hero,
@@ -502,6 +505,7 @@ pre {
 }
 
 .packet-tree {
+  min-width: 0;
   padding: 1.25rem;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -539,6 +543,8 @@ pre {
 .packet-tree code {
   color: var(--ink);
   font-weight: 700;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .packet-tree em {
