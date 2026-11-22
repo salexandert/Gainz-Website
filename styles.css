@@ -511,6 +511,26 @@ pre {
   margin: 2rem 0 3rem;
 }
 
+.donation-page .section-shell {
+  padding: 2.25rem 0;
+}
+
+.donation-overview h1 {
+  margin: 0 0 1rem;
+  font-size: 2.5rem;
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+.donation-page .section-shell h2 {
+  font-size: 1.65rem;
+  letter-spacing: 0;
+}
+
+.donation-note {
+  margin-top: 1rem;
+}
+
 .packet-tree {
   min-width: 0;
   padding: 1.25rem;
